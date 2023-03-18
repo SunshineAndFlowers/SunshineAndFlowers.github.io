@@ -101,9 +101,7 @@
 <li><p>编译期：.java源文件，经过编译，生成.class字节码文件</p>
 </li>
 <li><p>运行期：JVM加载.class并运行.class(0和1)</p>
-<blockquote>
 <p>特点：跨平台、一次编译到处使用</p>
-</blockquote>
 </li>
 </ul>
 </li>
@@ -261,6 +259,127 @@
 </ul>
 </li>
 </ul>
+</li>
+<li><p>命名法：</p>
+<ul>
+<li><p>小驼峰命名法：第1个单词首字母小写，其余单词首字母大写————变量&#x2F;方法</p>
+</li>
+<li><p>帕斯卡命名法&#x2F;大驼峰命名法：所有单词首字母大写————————–类</p>
+</li>
+</ul>
+</li>
+<li><p>Unicode：万国码、统一码、通用码，是世界级通用的定长(16位)字符集</p>
+</li>
+<li><p>运算符：</p>
+<ul>
+<li>算术：+，-，*，&#x2F;，%，++，–</li>
+<li>关系：&gt;、&lt;、&gt;&#x3D;、&lt;&#x3D;、&#x3D;&#x3D;、!&#x3D;</li>
+<li>逻辑：&amp;&amp;、||、!</li>
+<li>赋值：&#x3D;、+&#x3D;、-&#x3D;、*&#x3D;、&#x2F;&#x3D;、%&#x3D;</li>
+<li>字符串连接：+</li>
+<li>条件：boolean？数1：数2</li>
+</ul>
+</li>
+<li><p>分支结构(上)：基于条件执行</p>
+<ul>
+<li>if结构：1条路</li>
+<li>if…else结构：2条路</li>
+<li>if…else if结构：多条路</li>
+</ul>
+</li>
+</ol>
+<h2 id="笔记："><a href="#笔记：" class="headerlink" title="笔记："></a>笔记：</h2><ol>
+<li><p>运算符：</p>
+<ul>
+<li><p>算术：+，-，*，&#x2F;，%，++，–</p>
+<ul>
+<li><p>%:取模&#x2F;取余，余数为0即为整除</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">System.out.println(<span class="number">5</span>%<span class="number">2</span>); <span class="comment">//1，商2余1</span></span><br><span class="line">System.out.println(<span class="number">8</span>%<span class="number">2</span>); <span class="comment">//0，商4余0----整除</span></span><br><span class="line">System.out.println(<span class="number">2</span>%<span class="number">8</span>); <span class="comment">//2，商0余2</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>++&#x2F;–:自增1&#x2F;自减1，可在变量前也可在变量后</p>
+<ul>
+<li>单独使用时，在前在后都一样</li>
+<li>被使用时，在前在后不一样<ul>
+<li>a++的值为a————(a–的值为a)</li>
+<li>++a的值为a+1——–(–a的值为a-1)</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//演示++单独使用</span></span><br><span class="line"><span class="type">int</span> a=<span class="number">5</span>,b=<span class="number">5</span>;</span><br><span class="line">a++; <span class="comment">//相当于a=a+1</span></span><br><span class="line">++b; <span class="comment">//相当于b=b+1</span></span><br><span class="line">System.out.println(a); <span class="comment">//6</span></span><br><span class="line">System.out.println(b); <span class="comment">//6</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//演示++被使用</span></span><br><span class="line"><span class="type">int</span> a=<span class="number">5</span>,b=<span class="number">5</span>;</span><br><span class="line"><span class="type">int</span> <span class="variable">c</span> <span class="operator">=</span> a++; <span class="comment">//将a++的值5赋值给c，同时a自增1</span></span><br><span class="line"><span class="type">int</span> <span class="variable">d</span> <span class="operator">=</span> ++b; <span class="comment">//将++b的值6赋值给d，同时b自增1</span></span><br><span class="line">System.out.println(a); <span class="comment">//6</span></span><br><span class="line">System.out.println(b); <span class="comment">//6</span></span><br><span class="line">System.out.println(c); <span class="comment">//5</span></span><br><span class="line">System.out.println(d); <span class="comment">//6</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//演示--单独使用:</span></span><br><span class="line"><span class="type">int</span> a=<span class="number">5</span>,b=<span class="number">5</span>;</span><br><span class="line">a--; <span class="comment">//相当于a=a-1</span></span><br><span class="line">--b; <span class="comment">//相当于b=b-1</span></span><br><span class="line">System.out.println(a); <span class="comment">//4</span></span><br><span class="line">System.out.println(b); <span class="comment">//4</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//演示--被使用:</span></span><br><span class="line"><span class="type">int</span> a=<span class="number">5</span>,b=<span class="number">5</span>;</span><br><span class="line"><span class="type">int</span> <span class="variable">c</span> <span class="operator">=</span> a--; <span class="comment">//将a--的值5赋值给c，同时a自减1变为4</span></span><br><span class="line"><span class="type">int</span> <span class="variable">d</span> <span class="operator">=</span> --b; <span class="comment">//将--b的值4赋值给d，同时b自减1变为4</span></span><br><span class="line">System.out.println(a); <span class="comment">//4</span></span><br><span class="line">System.out.println(b); <span class="comment">//4</span></span><br><span class="line">System.out.println(c); <span class="comment">//5</span></span><br><span class="line">System.out.println(d); <span class="comment">//4</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><p>关系：&gt;、&lt;、&gt;&#x3D;、&lt;&#x3D;、&#x3D;&#x3D;、!&#x3D;</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span>)&gt;(大于)、&lt;(小于)</span><br><span class="line">  &gt;=(大于或等于)、&lt;=(小于或等于)</span><br><span class="line">  ==(等于)、!=(不等于)</span><br><span class="line"><span class="number">2</span>)关系运算的结果为<span class="type">boolean</span>型，</span><br><span class="line">  关系成立则为<span class="literal">true</span>，关系不成立则为<span class="literal">false</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> a=<span class="number">5</span>,b=<span class="number">10</span>,c=<span class="number">5</span>;</span><br><span class="line"><span class="type">boolean</span> <span class="variable">b1</span> <span class="operator">=</span> a&gt;b;</span><br><span class="line">System.out.println(b1);   <span class="comment">//false</span></span><br><span class="line">System.out.println(c&lt;b);  <span class="comment">//true</span></span><br><span class="line">System.out.println(a&gt;=c); <span class="comment">//true</span></span><br><span class="line">System.out.println(a&lt;=b); <span class="comment">//true</span></span><br><span class="line">System.out.println(a==c); <span class="comment">//true</span></span><br><span class="line">System.out.println(a!=c); <span class="comment">//false</span></span><br><span class="line"></span><br><span class="line">System.out.println(a%<span class="number">2</span>==<span class="number">0</span>); <span class="comment">//false</span></span><br><span class="line">System.out.println(a+c&gt;b);  <span class="comment">//false</span></span><br><span class="line">System.out.println(a++&gt;<span class="number">5</span>); <span class="comment">//false------a自增1变为6</span></span><br><span class="line">System.out.println(a++&gt;<span class="number">5</span>); <span class="comment">//true-------a自增1变为7</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>逻辑：&amp;&amp;、||、!</p>
+<ul>
+<li><p>逻辑运算是建立在关系运算的基础之上的<br>逻辑运算的结果也是boolean型  </p>
+</li>
+<li><p>&amp;&amp;：短路与(并且)，两边都为真则为真，见false则false</p>
+<ul>
+<li><p>第1个条件为false时，则发生短路(后面的不执行了)</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> a=<span class="number">5</span>,b=<span class="number">10</span>,c=<span class="number">5</span>;</span><br><span class="line"><span class="type">boolean</span> <span class="variable">b1</span> <span class="operator">=</span> b&gt;=a &amp;&amp; b&lt;c;</span><br><span class="line">System.out.println(b1);          <span class="comment">//true&amp;&amp;false=false</span></span><br><span class="line">System.out.println(b&lt;=c &amp;&amp; b&gt;a); <span class="comment">//false&amp;&amp;true=false</span></span><br><span class="line">System.out.println(a==b &amp;&amp; b&lt;a); <span class="comment">//false&amp;&amp;false=false</span></span><br><span class="line">System.out.println(b!=c &amp;&amp; b&gt;a); <span class="comment">//true&amp;&amp;true=true</span></span><br><span class="line"><span class="type">int</span> <span class="variable">age</span> <span class="operator">=</span> <span class="number">99</span>;</span><br><span class="line">System.out.println(age&gt;=<span class="number">18</span> &amp;&amp; age&lt;=<span class="number">50</span>); <span class="comment">//年龄在18到50之间</span></span><br><span class="line"><span class="type">int</span> <span class="variable">score</span> <span class="operator">=</span> <span class="number">86</span>;</span><br><span class="line">System.out.println(score&gt;=<span class="number">0</span> &amp;&amp; score&lt;=<span class="number">100</span>); <span class="comment">//成绩在0到100之间</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//演示短路:</span></span><br><span class="line"><span class="type">boolean</span> <span class="variable">b3</span> <span class="operator">=</span> a&gt;b &amp;&amp; c++&gt;<span class="number">2</span>;</span><br><span class="line">System.out.println(b3); <span class="comment">//false</span></span><br><span class="line">System.out.println(c);  <span class="comment">//5，发生短路了</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><p>||：短路或(或者)，有真则为真，见true则true</p>
+<ul>
+<li><p>第1个条件为true时，则发生短路(后面的不执行了)</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> a=<span class="number">5</span>,b=<span class="number">10</span>,c=<span class="number">5</span>;</span><br><span class="line">System.out.println(b&gt;=a || b&lt;c); <span class="comment">//true||false=true</span></span><br><span class="line">System.out.println(b&lt;=c || b&gt;a); <span class="comment">//false||true=true</span></span><br><span class="line">System.out.println(b!=c || b&gt;a); <span class="comment">//true||true=true</span></span><br><span class="line">System.out.println(a==b || b&lt;a); <span class="comment">//false||false=false</span></span><br><span class="line"><span class="type">int</span> <span class="variable">score</span> <span class="operator">=</span> <span class="number">90</span>;</span><br><span class="line">System.out.println(score&lt;<span class="number">0</span> || score&gt;<span class="number">100</span>); <span class="comment">//成绩不合法验证</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//演示短路:</span></span><br><span class="line"><span class="type">boolean</span> <span class="variable">b3</span> <span class="operator">=</span> a&lt;b || c++&gt;<span class="number">2</span>;</span><br><span class="line">System.out.println(b3); <span class="comment">//true</span></span><br><span class="line">System.out.println(c);  <span class="comment">//5，发生短路了</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><p>!：逻辑非(取反)，非真则假，非假则真</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> a=<span class="number">5</span>,b=<span class="number">10</span>,c=<span class="number">5</span>;</span><br><span class="line"><span class="type">boolean</span> <span class="variable">b2</span> <span class="operator">=</span> !(a&lt;b);</span><br><span class="line">System.out.println(b2);     <span class="comment">//!true=false</span></span><br><span class="line">System.out.println(!(a&gt;b)); <span class="comment">//!false=true</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><p>赋值：&#x3D;、+&#x3D;、-&#x3D;、*&#x3D;、&#x2F;&#x3D;、%&#x3D;</p>
+<ul>
+<li><p>简单赋值运算符：&#x3D;</p>
+</li>
+<li><p>扩展赋值运算符：+&#x3D;,-&#x3D;,*&#x3D;,&#x2F;&#x3D;,%&#x3D;    </p>
+<ul>
+<li>注意:扩展赋值运算符自带强转功能</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> <span class="variable">a</span> <span class="operator">=</span> <span class="number">5</span>;</span><br><span class="line">a += <span class="number">10</span>; <span class="comment">//相当于a=(int)(a+10)</span></span><br><span class="line">System.out.println(a); <span class="comment">//15</span></span><br><span class="line">a *= <span class="number">2</span>; <span class="comment">//相当于a=(int)(a*2)</span></span><br><span class="line">System.out.println(a); <span class="comment">//30</span></span><br><span class="line">a /= <span class="number">6</span>; <span class="comment">//相当于a=(int)(a/6)</span></span><br><span class="line">System.out.println(a); <span class="comment">//5</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//小面试题:</span></span><br><span class="line"><span class="type">short</span> <span class="variable">s</span> <span class="operator">=</span> <span class="number">5</span>;</span><br><span class="line"><span class="comment">//s = s+10; //编译错误，需强转，改为:s=(short)(s+10);</span></span><br><span class="line">s += <span class="number">10</span>; <span class="comment">//相当于s=(short)(s+10);</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><p>字符串连接：+</p>
+<ul>
+<li><p>若两边为数字，则做加法运算</p>
+</li>
+<li><p>若两边出现了字符串，则做字符串连接</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> <span class="variable">age</span> <span class="operator">=</span> <span class="number">39</span>;</span><br><span class="line">System.out.println(<span class="string">&quot;age=&quot;</span>); <span class="comment">//age=</span></span><br><span class="line">System.out.println(age);    <span class="comment">//39</span></span><br><span class="line">System.out.println(<span class="string">&quot;age=&quot;</span>+age); <span class="comment">//age=39</span></span><br><span class="line">System.out.println(<span class="string">&quot;我今年&quot;</span>+age+<span class="string">&quot;岁了&quot;</span>); <span class="comment">//我今年39岁了</span></span><br><span class="line"></span><br><span class="line"><span class="type">String</span> <span class="variable">name</span> <span class="operator">=</span> <span class="string">&quot;WKJ&quot;</span>;</span><br><span class="line">System.out.println(<span class="string">&quot;大家好，我叫&quot;</span>+name); <span class="comment">//大家好，我叫WKJ</span></span><br><span class="line">System.out.println(<span class="string">&quot;大家好，我叫&quot;</span>+name+<span class="string">&quot;，今年&quot;</span>+age+<span class="string">&quot;岁了&quot;</span>); <span class="comment">//大家好，我叫WKJ，今年39岁了</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>任何类型的数据与字符串连接，结果都会变为字符串型</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">System.out.println(<span class="number">10</span>+<span class="number">20</span>+<span class="string">&quot;&quot;</span>+<span class="number">30</span>); <span class="comment">//3030---------String</span></span><br><span class="line">System.out.println(<span class="string">&quot;&quot;</span>+<span class="number">10</span>+<span class="number">20</span>+<span class="number">30</span>); <span class="comment">//102030-------String</span></span><br><span class="line">System.out.println(<span class="number">10</span>+<span class="number">20</span>+<span class="number">30</span>+<span class="string">&quot;&quot;</span>); <span class="comment">//60-----------String</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><p>条件：boolean？数1：数2</p>
+<ul>
+<li><p>语法：</p>
+<ul>
+<li>boolean?数1:数2</li>
+</ul>
+</li>
+<li><p>执行过程：</p>
+<ul>
+<li>整个条件运算是有值的，它的值要么是?号后的数1，要么是:号后的数2</li>
+<li>计算boolean的值:<ul>
+<li>若为true，则整个表达式的值为?号后的数1</li>
+<li>若为false，则整个表达式的值为:号后的数2</li>
+</ul>
+</li>
+</ul>
+<p>&#96;&#96;&#96;java<br>int num &#x3D; 5;<br>int flag &#x3D; num&gt;0?1:-1;<br>System.out.println(flag); &#x2F;&#x2F;1</p>
+<p>int a&#x3D;8,b&#x3D;5;<br>int max &#x3D; a&gt;b?a:b;<br>System.out.println(“max&#x3D;”+max); &#x2F;&#x2F;max&#x3D;8</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>分支结构(上)：基于条件执行</p>
+<p> if else并且if和else之间可以嵌套。</p>
 </li>
 </ol>
 
