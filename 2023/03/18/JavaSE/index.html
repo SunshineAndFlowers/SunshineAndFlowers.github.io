@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="java开发环境：  编译运行过程：  编译期：.java源文件，经过编译，生成.class字节码文件  运行期：JVM加载.class并运行.class(0和1)  特点：跨平台、一次编译到处使用     名词解释：  JVM：java虚拟机  加载.class并运行.class   JRE：java运行环境  除了包含JVM以外还包含了运行java程序所必须的环境 JRE &#x3D; JV">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://example.com/2023/03/18/JavaSE/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="java开发环境：  编译运行过程：  编译期：.java源文件，经过编译，生成.class字节码文件  运行期：JVM加载.class并运行.class(0和1)  特点：跨平台、一次编译到处使用     名词解释：  JVM：java虚拟机  加载.class并运行.class   JRE：java运行环境  除了包含JVM以外还包含了运行java程序所必须的环境 JRE &#x3D; JV">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2023-03-18T07:29:32.278Z">
+<meta property="article:modified_time" content="2023-03-18T07:34:37.427Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-JavaSE" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2023/03/18/JavaSE/" class="article-date">
+  <time class="dt-published" datetime="2023-03-18T07:29:32.278Z" itemprop="datePublished">2023-03-18</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <ol>
+<li><p>java开发环境：</p>
+<ul>
+<li><p>编译运行过程：</p>
+<ul>
+<li><p>编译期：.java源文件，经过编译，生成.class字节码文件</p>
+</li>
+<li><p>运行期：JVM加载.class并运行.class(0和1)</p>
+<blockquote>
+<p>特点：跨平台、一次编译到处使用</p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li><p>名词解释：</p>
+<ul>
+<li><p>JVM：java虚拟机</p>
+<ul>
+<li>加载.class并运行.class</li>
+</ul>
+</li>
+<li><p>JRE：java运行环境</p>
+<ul>
+<li>除了包含JVM以外还包含了运行java程序所必须的环境</li>
+<li>JRE &#x3D; JVM+java系统类库(小零件)</li>
+</ul>
+</li>
+<li><p>JDK：java开发工具包</p>
+<ul>
+<li>除了包含JRE以外还包含了开发java程序所必须的命令工具</li>
+<li>JDK &#x3D; JRE+编译、运行等命令工具</li>
+</ul>
+<blockquote>
+<p>说明：</p>
+<ol>
+<li>运行java程序的最小环境为JRE</li>
+<li>开发java程序的最小环境为JDK</li>
+</ol>
+</blockquote>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Idea：</p>
+<ul>
+<li><p>JetBrains公司的，分为社区版(免费)和终级版(收费)</p>
+</li>
+<li><p>开发步骤：</p>
+<ul>
+<li><p>新建Java项目&#x2F;工程————————-小区</p>
+</li>
+<li><p>新建Java包———————————–楼+单元</p>
+</li>
+<li><p>新建Java类———————————–房子</p>
+<ul>
+<li>注释：解释性文本(计算机不执行)</li>
+</ul>
+</li>
+<li><p>单行注释：&#x2F;&#x2F;</p>
+</li>
+<li><p>多行注释：&#x2F;*     *&#x2F;—————–明天用</p>
+</li>
+<li><p>文档注释：&#x2F;**    *&#x2F;—————-具有特殊意义</p>
+</li>
+</ul>
+<ol>
+<li>下载和安装JDK(油)和Idea(车)：——已经装过的同学不需要重装</li>
+</ol>
+</li>
+<li><p>下载：</p>
+<ul>
+<li>打开浏览器，在地址栏中输入doc.canglaoshi.org，回车</li>
+<li>找到常用下载，找到Windows必备&#x2F;Mac OS必备，下载里面的jdk8和Idea社区版</li>
+</ul>
+</li>
+<li><p>安装：</p>
+<ul>
+<li>JDK的安装：一路下一步，尽量装在C盘下，路径中绝对不能包含中文</li>
+<li>Idea的安装：一路下一步，保证在桌面上能看到Idea的可执行程序</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>变量：存数的</p>
+<ul>
+<li>声明：—-相当于在银行开了个帐户</li>
+<li>初始化：—-相当于给帐户存钱</li>
+<li>使用：—–使用的是帐户里面的钱<ul>
+<li>对变量的使用就是对它所存的那个数的使用</li>
+<li>变量的用之前必须声明并初始化</li>
+</ul>
+</li>
+<li>命名：—–相当于给帐户起名<ul>
+<li>只能包含字母、数字、_和$符，不能以数字开头</li>
+<li>严格区分大小写</li>
+<li>不能使用关键字</li>
+<li>允许中文命名，但不建议，建议”英文的见名知意”、”小驼峰命名法”</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>八种基本数据类型：byte、short、int、long、float、double、boolean、char</p>
+<ul>
+<li><p>int：整型，4个字节，-21个多亿到21个多亿</p>
+<ul>
+<li>整数直接量默认为int类型，但不能超出范围，若超范围则发生编译错误</li>
+<li>两个整数相除，结果还是整数，小数位无条件舍弃(不会四舍五入)</li>
+<li>运算时若超出范围，则发生溢出，溢出不是错误，但是需要避免</li>
+</ul>
+</li>
+<li><p>long：长整型，8个字节，-900万万亿多到900万万亿多</p>
+<ul>
+<li>若想表示长整型直接量，需在数字后加L或l </li>
+<li>运算时若有可能溢出，建议在第1个数字后加L</li>
+</ul>
+</li>
+<li><p>double：浮点型，8个字节，很大很大很大</p>
+<ul>
+<li>小数直接量默认为double型，若想表示float，需在数字后加F或f</li>
+<li>不能表示精确数据，运算时有可能会发生舍入误差，精确场合不能使用</li>
+</ul>
+</li>
+<li><p>boolean：布尔型，1个字节</p>
+<ul>
+<li>只能存储true或false</li>
+</ul>
+</li>
+<li><p>char：字符型，2个字节</p>
+<ul>
+<li><p>采用的是Unicode编码格式，一个字符对应一个码</p>
+<p>表现的形式是字符char，但本质上是码int(0到65535之间)</p>
+<p>(ASCII：’a’—-97     ‘A’—-65    ‘0’—-48)</p>
+</li>
+<li><p>字符型直接量必须放在单引号中，有且仅有1个</p>
+</li>
+<li><p>特殊符号需要通过\来转义</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>类型间的转换：</p>
+<ul>
+<li><p>基本数据类型从小到大依次为：</p>
+<ul>
+<li><p>byte—-short—-int—-long—-float—-double</p>
+<p>​               char—-</p>
+</li>
+</ul>
+</li>
+<li><p>两种方式：</p>
+<ul>
+<li>自动&#x2F;隐式类型转换：小类型到大类型</li>
+<li>强制类型转换：大类型到小类型<ul>
+<li>语法：(要转换成为的数据类型)变量</li>
+<li>注意：强转有可能会溢出或丢失精度</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>两点规则：</p>
+<ul>
+<li><p>整数直接量可以直接赋值给byte,short,char，但不能超出范围</p>
+</li>
+<li><p>byte,short,char型数据参与运算时，系统会将其自动转换为int类型再运算</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2023/03/18/JavaSE/" data-id="clfdnlx9m0000jct4bjry8tfd" data-title="" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2023/03/18/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Hello World</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/03/">March 2023</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2023/03/18/JavaSE/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2023/03/18/hello-world/">Hello World</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2023 John Doe<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.4.1.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>
