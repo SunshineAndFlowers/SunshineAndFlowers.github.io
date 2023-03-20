@@ -1,0 +1,872 @@
+<!DOCTYPE html>
+
+
+<html lang="en">
+  
+
+    <head>
+      <meta charset="utf-8" />
+        
+      <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1"
+      />
+      <title>JavaSE |  JavaWorld</title>
+  <meta name="generator" content="hexo-theme-ayer">
+      
+      <link rel="shortcut icon" href="/favicon.ico" />
+       
+<link rel="stylesheet" href="/dist/main.css">
+
+      
+<link rel="stylesheet" href="/css/fonts/remixicon.css">
+
+      
+<link rel="stylesheet" href="/css/custom.css">
+ 
+      <script src="https://cdn.staticfile.org/pace/1.2.4/pace.min.js"></script>
+       
+ 
+
+      <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-bulma@5.0.1/bulma.min.css"
+      />
+      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.min.js"></script>
+
+      <!-- mermaid -->
+      
+      <style>
+        .swal2-styled.swal2-confirm {
+          font-size: 1.6rem;
+        }
+      </style>
+    </head>
+  </html>
+</html>
+
+
+<body>
+  <div id="app">
+    
+      
+    <main class="content on">
+      <section class="outer">
+  <article
+  id="post-JavaSE"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h1 class="article-title sea-center" style="border-left:0" itemprop="name">
+  JavaSE
+</h1>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2023/03/18/JavaSE/" class="article-date">
+  <time datetime="2023-03-18T08:08:22.000Z" itemprop="datePublished">2023-03-18</time>
+</a>   
+<div class="word_count">
+    <span class="post-time">
+        <span class="post-meta-item-icon">
+            <i class="ri-quill-pen-line"></i>
+            <span class="post-meta-item-text"> Word count:</span>
+            <span class="post-count">2.4k</span>
+        </span>
+    </span>
+
+    <span class="post-time">
+        &nbsp; | &nbsp;
+        <span class="post-meta-item-icon">
+            <i class="ri-book-open-line"></i>
+            <span class="post-meta-item-text"> Reading time≈</span>
+            <span class="post-count">10 min</span>
+        </span>
+    </span>
+</div>
+ 
+    </div>
+      
+
+
+
+  
+    <div class="article-entry" itemprop="articleBody">
+       
+  <p>##Java的开发环境数据类型</p>
+<ol>
+<li><p>java开发环境：</p>
+<ul>
+<li><p>编译运行过程：</p>
+<ul>
+<li><p>编译期：.java源文件，经过编译，生成.class字节码文件</p>
+</li>
+<li><p>运行期：JVM加载.class并运行.class(0和1)</p>
+<p>特点：跨平台、一次编译到处使用</p>
+</li>
+</ul>
+</li>
+<li><p>名词解释：</p>
+<ul>
+<li><p>JVM：java虚拟机</p>
+<ul>
+<li>加载.class并运行.class</li>
+</ul>
+</li>
+<li><p>JRE：java运行环境</p>
+<ul>
+<li>除了包含JVM以外还包含了运行java程序所必须的环境</li>
+<li>JRE &#x3D; JVM+java系统类库(小零件)</li>
+</ul>
+</li>
+<li><p>JDK：java开发工具包</p>
+<ul>
+<li>除了包含JRE以外还包含了开发java程序所必须的命令工具</li>
+<li>JDK &#x3D; JRE+编译、运行等命令工具</li>
+</ul>
+<p> 说明：</p>
+<ol>
+<li>运行java程序的最小环境为JRE</li>
+<li>开发java程序的最小环境为JDK</li>
+</ol>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Idea：</p>
+<ul>
+<li><p>JetBrains公司的，分为社区版(免费)和终级版(收费)</p>
+</li>
+<li><p>开发步骤：</p>
+<ul>
+<li><p>新建Java项目&#x2F;工程————————-小区</p>
+</li>
+<li><p>新建Java包———————————–楼+单元</p>
+</li>
+<li><p>新建Java类———————————–房子</p>
+<ul>
+<li>注释：解释性文本(计算机不执行)</li>
+</ul>
+</li>
+<li><p>单行注释：&#x2F;&#x2F;</p>
+</li>
+<li><p>多行注释：&#x2F;*     *&#x2F;—————–明天用</p>
+</li>
+<li><p>文档注释：&#x2F;**    *&#x2F;—————-具有特殊意义</p>
+</li>
+</ul>
+<ol>
+<li>下载和安装JDK(油)和Idea(车)：——已经装过的同学不需要重装</li>
+</ol>
+</li>
+<li><p>下载：</p>
+<ul>
+<li>打开浏览器，在地址栏中输入doc.canglaoshi.org，回车</li>
+<li>找到常用下载，找到Windows必备&#x2F;Mac OS必备，下载里面的jdk8和Idea社区版</li>
+</ul>
+</li>
+<li><p>安装：</p>
+<ul>
+<li>JDK的安装：一路下一步，尽量装在C盘下，路径中绝对不能包含中文</li>
+<li>Idea的安装：一路下一步，保证在桌面上能看到Idea的可执行程序</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>变量：存数的</p>
+<ul>
+<li>声明：—-相当于在银行开了个帐户</li>
+<li>初始化：—-相当于给帐户存钱</li>
+<li>使用：—–使用的是帐户里面的钱<ul>
+<li>对变量的使用就是对它所存的那个数的使用</li>
+<li>变量的用之前必须声明并初始化</li>
+</ul>
+</li>
+<li>命名：—–相当于给帐户起名<ul>
+<li>只能包含字母、数字、_和$符，不能以数字开头</li>
+<li>严格区分大小写</li>
+<li>不能使用关键字</li>
+<li>允许中文命名，但不建议，建议”英文的见名知意”、”小驼峰命名法”</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>八种基本数据类型：byte、short、int、long、float、double、boolean、char</p>
+<ul>
+<li><p>int：整型，4个字节，-21个多亿到21个多亿</p>
+<ul>
+<li>整数直接量默认为int类型，但不能超出范围，若超范围则发生编译错误</li>
+<li>两个整数相除，结果还是整数，小数位无条件舍弃(不会四舍五入)</li>
+<li>运算时若超出范围，则发生溢出，溢出不是错误，但是需要避免</li>
+</ul>
+</li>
+<li><p>long：长整型，8个字节，-900万万亿多到900万万亿多</p>
+<ul>
+<li>若想表示长整型直接量，需在数字后加L或l </li>
+<li>运算时若有可能溢出，建议在第1个数字后加L</li>
+</ul>
+</li>
+<li><p>double：浮点型，8个字节，很大很大很大</p>
+<ul>
+<li>小数直接量默认为double型，若想表示float，需在数字后加F或f</li>
+<li>不能表示精确数据，运算时有可能会发生舍入误差，精确场合不能使用</li>
+</ul>
+</li>
+<li><p>boolean：布尔型，1个字节</p>
+<ul>
+<li>只能存储true或false</li>
+</ul>
+</li>
+<li><p>char：字符型，2个字节</p>
+<ul>
+<li><p>采用的是Unicode编码格式，一个字符对应一个码</p>
+<p>表现的形式是字符char，但本质上是码int(0到65535之间)</p>
+<p>(ASCII：’a’—-97     ‘A’—-65    ‘0’—-48)</p>
+</li>
+<li><p>字符型直接量必须放在单引号中，有且仅有1个</p>
+</li>
+<li><p>特殊符号需要通过\来转义</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>类型间的转换：</p>
+<ul>
+<li><p>基本数据类型从小到大依次为：</p>
+<ul>
+<li><p>byte—-short—-int—-long—-float—-double</p>
+<p>​               char—-</p>
+</li>
+</ul>
+</li>
+<li><p>两种方式：</p>
+<ul>
+<li>自动&#x2F;隐式类型转换：小类型到大类型</li>
+<li>强制类型转换：大类型到小类型<ul>
+<li>语法：(要转换成为的数据类型)变量</li>
+<li>注意：强转有可能会溢出或丢失精度</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>两点规则：</p>
+<ul>
+<li><p>整数直接量可以直接赋值给byte,short,char，但不能超出范围</p>
+</li>
+<li><p>byte,short,char型数据参与运算时，系统会将其自动转换为int类型再运算</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>命名法：</p>
+<ul>
+<li><p>小驼峰命名法：第1个单词首字母小写，其余单词首字母大写————变量&#x2F;方法</p>
+</li>
+<li><p>帕斯卡命名法&#x2F;大驼峰命名法：所有单词首字母大写————————–类</p>
+</li>
+</ul>
+</li>
+<li><p>Unicode：万国码、统一码、通用码，是世界级通用的定长(16位)字符集</p>
+</li>
+</ol>
+<p>##Java中的运算</p>
+<ol>
+<li><p>运算符：</p>
+<ul>
+<li>算术：+，-，*，&#x2F;，%，++，–</li>
+<li>关系：&gt;、&lt;、&gt;&#x3D;、&lt;&#x3D;、&#x3D;&#x3D;、!&#x3D;</li>
+<li>逻辑：&amp;&amp;、||、!</li>
+<li>赋值：&#x3D;、+&#x3D;、-&#x3D;、*&#x3D;、&#x2F;&#x3D;、%&#x3D;</li>
+<li>字符串连接：+</li>
+<li>条件：boolean？数1：数2</li>
+</ul>
+</li>
+<li><p>分支结构(上)：基于条件执行</p>
+<ul>
+<li>if结构：1条路</li>
+<li>if…else结构：2条路</li>
+<li>if…else if结构：多条路</li>
+</ul>
+</li>
+<li><p>运算符：</p>
+<ul>
+<li><p>算术：+，-，*，&#x2F;，%，++，–</p>
+<ul>
+<li><p>%:取模&#x2F;取余，余数为0即为整除</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">System.out.println(<span class="number">5</span>%<span class="number">2</span>); <span class="comment">//1，商2余1</span></span><br><span class="line">System.out.println(<span class="number">8</span>%<span class="number">2</span>); <span class="comment">//0，商4余0----整除</span></span><br><span class="line">System.out.println(<span class="number">2</span>%<span class="number">8</span>); <span class="comment">//2，商0余2</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>++&#x2F;–:自增1&#x2F;自减1，可在变量前也可在变量后</p>
+<ul>
+<li>单独使用时，在前在后都一样</li>
+<li>被使用时，在前在后不一样<ul>
+<li>a++的值为a————(a–的值为a)</li>
+<li>++a的值为a+1——–(–a的值为a-1)</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//演示++单独使用</span></span><br><span class="line"><span class="type">int</span> a=<span class="number">5</span>,b=<span class="number">5</span>;</span><br><span class="line">a++; <span class="comment">//相当于a=a+1</span></span><br><span class="line">++b; <span class="comment">//相当于b=b+1</span></span><br><span class="line">System.out.println(a); <span class="comment">//6</span></span><br><span class="line">System.out.println(b); <span class="comment">//6</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//演示++被使用</span></span><br><span class="line"><span class="type">int</span> a=<span class="number">5</span>,b=<span class="number">5</span>;</span><br><span class="line"><span class="type">int</span> <span class="variable">c</span> <span class="operator">=</span> a++; <span class="comment">//将a++的值5赋值给c，同时a自增1</span></span><br><span class="line"><span class="type">int</span> <span class="variable">d</span> <span class="operator">=</span> ++b; <span class="comment">//将++b的值6赋值给d，同时b自增1</span></span><br><span class="line">System.out.println(a); <span class="comment">//6</span></span><br><span class="line">System.out.println(b); <span class="comment">//6</span></span><br><span class="line">System.out.println(c); <span class="comment">//5</span></span><br><span class="line">System.out.println(d); <span class="comment">//6</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//演示--单独使用:</span></span><br><span class="line"><span class="type">int</span> a=<span class="number">5</span>,b=<span class="number">5</span>;</span><br><span class="line">a--; <span class="comment">//相当于a=a-1</span></span><br><span class="line">--b; <span class="comment">//相当于b=b-1</span></span><br><span class="line">System.out.println(a); <span class="comment">//4</span></span><br><span class="line">System.out.println(b); <span class="comment">//4</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//演示--被使用:</span></span><br><span class="line"><span class="type">int</span> a=<span class="number">5</span>,b=<span class="number">5</span>;</span><br><span class="line"><span class="type">int</span> <span class="variable">c</span> <span class="operator">=</span> a--; <span class="comment">//将a--的值5赋值给c，同时a自减1变为4</span></span><br><span class="line"><span class="type">int</span> <span class="variable">d</span> <span class="operator">=</span> --b; <span class="comment">//将--b的值4赋值给d，同时b自减1变为4</span></span><br><span class="line">System.out.println(a); <span class="comment">//4</span></span><br><span class="line">System.out.println(b); <span class="comment">//4</span></span><br><span class="line">System.out.println(c); <span class="comment">//5</span></span><br><span class="line">System.out.println(d); <span class="comment">//4</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><p>关系：&gt;、&lt;、&gt;&#x3D;、&lt;&#x3D;、&#x3D;&#x3D;、!&#x3D;</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span>)&gt;(大于)、&lt;(小于)</span><br><span class="line">  &gt;=(大于或等于)、&lt;=(小于或等于)</span><br><span class="line">  ==(等于)、!=(不等于)</span><br><span class="line"><span class="number">2</span>)关系运算的结果为<span class="type">boolean</span>型，</span><br><span class="line">  关系成立则为<span class="literal">true</span>，关系不成立则为<span class="literal">false</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> a=<span class="number">5</span>,b=<span class="number">10</span>,c=<span class="number">5</span>;</span><br><span class="line"><span class="type">boolean</span> <span class="variable">b1</span> <span class="operator">=</span> a&gt;b;</span><br><span class="line">System.out.println(b1);   <span class="comment">//false</span></span><br><span class="line">System.out.println(c&lt;b);  <span class="comment">//true</span></span><br><span class="line">System.out.println(a&gt;=c); <span class="comment">//true</span></span><br><span class="line">System.out.println(a&lt;=b); <span class="comment">//true</span></span><br><span class="line">System.out.println(a==c); <span class="comment">//true</span></span><br><span class="line">System.out.println(a!=c); <span class="comment">//false</span></span><br><span class="line"></span><br><span class="line">System.out.println(a%<span class="number">2</span>==<span class="number">0</span>); <span class="comment">//false</span></span><br><span class="line">System.out.println(a+c&gt;b);  <span class="comment">//false</span></span><br><span class="line">System.out.println(a++&gt;<span class="number">5</span>); <span class="comment">//false------a自增1变为6</span></span><br><span class="line">System.out.println(a++&gt;<span class="number">5</span>); <span class="comment">//true-------a自增1变为7</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>逻辑：&amp;&amp;、||、!</p>
+<ul>
+<li><p>逻辑运算是建立在关系运算的基础之上的<br>逻辑运算的结果也是boolean型  </p>
+</li>
+<li><p>&amp;&amp;：短路与(并且)，两边都为真则为真，见false则false</p>
+<ul>
+<li><p>第1个条件为false时，则发生短路(后面的不执行了)</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> a=<span class="number">5</span>,b=<span class="number">10</span>,c=<span class="number">5</span>;</span><br><span class="line"><span class="type">boolean</span> <span class="variable">b1</span> <span class="operator">=</span> b&gt;=a &amp;&amp; b&lt;c;</span><br><span class="line">System.out.println(b1);          <span class="comment">//true&amp;&amp;false=false</span></span><br><span class="line">System.out.println(b&lt;=c &amp;&amp; b&gt;a); <span class="comment">//false&amp;&amp;true=false</span></span><br><span class="line">System.out.println(a==b &amp;&amp; b&lt;a); <span class="comment">//false&amp;&amp;false=false</span></span><br><span class="line">System.out.println(b!=c &amp;&amp; b&gt;a); <span class="comment">//true&amp;&amp;true=true</span></span><br><span class="line"><span class="type">int</span> <span class="variable">age</span> <span class="operator">=</span> <span class="number">99</span>;</span><br><span class="line">System.out.println(age&gt;=<span class="number">18</span> &amp;&amp; age&lt;=<span class="number">50</span>); <span class="comment">//年龄在18到50之间</span></span><br><span class="line"><span class="type">int</span> <span class="variable">score</span> <span class="operator">=</span> <span class="number">86</span>;</span><br><span class="line">System.out.println(score&gt;=<span class="number">0</span> &amp;&amp; score&lt;=<span class="number">100</span>); <span class="comment">//成绩在0到100之间</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//演示短路:</span></span><br><span class="line"><span class="type">boolean</span> <span class="variable">b3</span> <span class="operator">=</span> a&gt;b &amp;&amp; c++&gt;<span class="number">2</span>;</span><br><span class="line">System.out.println(b3); <span class="comment">//false</span></span><br><span class="line">System.out.println(c);  <span class="comment">//5，发生短路了</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><p>||：短路或(或者)，有真则为真，见true则true</p>
+<ul>
+<li><p>第1个条件为true时，则发生短路(后面的不执行了)</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> a=<span class="number">5</span>,b=<span class="number">10</span>,c=<span class="number">5</span>;</span><br><span class="line">System.out.println(b&gt;=a || b&lt;c); <span class="comment">//true||false=true</span></span><br><span class="line">System.out.println(b&lt;=c || b&gt;a); <span class="comment">//false||true=true</span></span><br><span class="line">System.out.println(b!=c || b&gt;a); <span class="comment">//true||true=true</span></span><br><span class="line">System.out.println(a==b || b&lt;a); <span class="comment">//false||false=false</span></span><br><span class="line"><span class="type">int</span> <span class="variable">score</span> <span class="operator">=</span> <span class="number">90</span>;</span><br><span class="line">System.out.println(score&lt;<span class="number">0</span> || score&gt;<span class="number">100</span>); <span class="comment">//成绩不合法验证</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//演示短路:</span></span><br><span class="line"><span class="type">boolean</span> <span class="variable">b3</span> <span class="operator">=</span> a&lt;b || c++&gt;<span class="number">2</span>;</span><br><span class="line">System.out.println(b3); <span class="comment">//true</span></span><br><span class="line">System.out.println(c);  <span class="comment">//5，发生短路了</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><p>!：逻辑非(取反)，非真则假，非假则真</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> a=<span class="number">5</span>,b=<span class="number">10</span>,c=<span class="number">5</span>;</span><br><span class="line"><span class="type">boolean</span> <span class="variable">b2</span> <span class="operator">=</span> !(a&lt;b);</span><br><span class="line">System.out.println(b2);     <span class="comment">//!true=false</span></span><br><span class="line">System.out.println(!(a&gt;b)); <span class="comment">//!false=true</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><p>赋值：&#x3D;、+&#x3D;、-&#x3D;、*&#x3D;、&#x2F;&#x3D;、%&#x3D;</p>
+<ul>
+<li><p>简单赋值运算符：&#x3D;</p>
+</li>
+<li><p>扩展赋值运算符：+&#x3D;,-&#x3D;,*&#x3D;,&#x2F;&#x3D;,%&#x3D;    </p>
+<ul>
+<li>注意:扩展赋值运算符自带强转功能</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> <span class="variable">a</span> <span class="operator">=</span> <span class="number">5</span>;</span><br><span class="line">a += <span class="number">10</span>; <span class="comment">//相当于a=(int)(a+10)</span></span><br><span class="line">System.out.println(a); <span class="comment">//15</span></span><br><span class="line">a *= <span class="number">2</span>; <span class="comment">//相当于a=(int)(a*2)</span></span><br><span class="line">System.out.println(a); <span class="comment">//30</span></span><br><span class="line">a /= <span class="number">6</span>; <span class="comment">//相当于a=(int)(a/6)</span></span><br><span class="line">System.out.println(a); <span class="comment">//5</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//小面试题:</span></span><br><span class="line"><span class="type">short</span> <span class="variable">s</span> <span class="operator">=</span> <span class="number">5</span>;</span><br><span class="line"><span class="comment">//s = s+10; //编译错误，需强转，改为:s=(short)(s+10);</span></span><br><span class="line">s += <span class="number">10</span>; <span class="comment">//相当于s=(short)(s+10);</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><p>字符串连接：+</p>
+<ul>
+<li><p>若两边为数字，则做加法运算</p>
+</li>
+<li><p>若两边出现了字符串，则做字符串连接</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> <span class="variable">age</span> <span class="operator">=</span> <span class="number">39</span>;</span><br><span class="line">System.out.println(<span class="string">&quot;age=&quot;</span>); <span class="comment">//age=</span></span><br><span class="line">System.out.println(age);    <span class="comment">//39</span></span><br><span class="line">System.out.println(<span class="string">&quot;age=&quot;</span>+age); <span class="comment">//age=39</span></span><br><span class="line">System.out.println(<span class="string">&quot;我今年&quot;</span>+age+<span class="string">&quot;岁了&quot;</span>); <span class="comment">//我今年39岁了</span></span><br><span class="line"></span><br><span class="line"><span class="type">String</span> <span class="variable">name</span> <span class="operator">=</span> <span class="string">&quot;WKJ&quot;</span>;</span><br><span class="line">System.out.println(<span class="string">&quot;大家好，我叫&quot;</span>+name); <span class="comment">//大家好，我叫WKJ</span></span><br><span class="line">System.out.println(<span class="string">&quot;大家好，我叫&quot;</span>+name+<span class="string">&quot;，今年&quot;</span>+age+<span class="string">&quot;岁了&quot;</span>); <span class="comment">//大家好，我叫WKJ，今年39岁了</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>任何类型的数据与字符串连接，结果都会变为字符串型</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">System.out.println(<span class="number">10</span>+<span class="number">20</span>+<span class="string">&quot;&quot;</span>+<span class="number">30</span>); <span class="comment">//3030---------String</span></span><br><span class="line">System.out.println(<span class="string">&quot;&quot;</span>+<span class="number">10</span>+<span class="number">20</span>+<span class="number">30</span>); <span class="comment">//102030-------String</span></span><br><span class="line">System.out.println(<span class="number">10</span>+<span class="number">20</span>+<span class="number">30</span>+<span class="string">&quot;&quot;</span>); <span class="comment">//60-----------String</span></span><br><span class="line"></span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<p>##Java程序的基本结构</p>
+<ul>
+<li><p>条件：boolean？数1：数2</p>
+<ul>
+<li><p>语法：</p>
+<ul>
+<li>boolean?数1:数2</li>
+</ul>
+</li>
+<li><p>执行过程：</p>
+<ul>
+<li>整个条件运算是有值的，它的值要么是?号后的数1，要么是:号后的数2</li>
+<li>计算boolean的值:<ul>
+<li>若为true，则整个表达式的值为?号后的数1</li>
+<li>若为false，则整个表达式的值为:号后的数2</li>
+</ul>
+</li>
+</ul>
+<p>&#96;&#96;&#96;java<br>int num &#x3D; 5;<br>int flag &#x3D; num&gt;0?1:-1;<br>System.out.println(flag); &#x2F;&#x2F;1</p>
+<p>int a&#x3D;8,b&#x3D;5;<br>int max &#x3D; a&gt;b?a:b;<br>System.out.println(“max&#x3D;”+max); &#x2F;&#x2F;max&#x3D;8</p>
+</li>
+</ul>
+</li>
+</ul>
+<ol start="2">
+<li><p>分支结构(上)：基于条件执行</p>
+<p> if else并且if和else之间可以嵌套。</p>
+</li>
+</ol>
+ 
+      <!-- reward -->
+      
+      <div id="reword-out">
+        <div id="reward-btn">
+          Donate
+        </div>
+      </div>
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <div class="declare">
+      <ul class="post-copyright">
+        <li>
+          <i class="ri-copyright-line"></i>
+          <strong>Copyright： </strong>
+          
+          Copyright is owned by the author. For commercial reprints, please contact the author for authorization. For non-commercial reprints, please indicate the source.
+          
+        </li>
+      </ul>
+    </div>
+    
+    <footer class="article-footer">
+       
+<div class="share-btn">
+      <span class="share-sns share-outer">
+        <i class="ri-share-forward-line"></i>
+        分享
+      </span>
+      <div class="share-wrap">
+        <i class="arrow"></i>
+        <div class="share-icons">
+          
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="ri-weibo-fill"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="ri-wechat-fill"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="ri-qq-fill"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="ri-douban-line"></i>
+          </a>
+          <!-- <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a> -->
+          
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="ri-facebook-circle-fill"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="ri-twitter-fill"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="ri-google-fill"></i>
+          </a>
+        </div>
+      </div>
+</div>
+
+<div class="wx-share-modal">
+    <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://example.com/2023/03/18/JavaSE/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div id="share-mask"></div>  
+    </footer>
+  </div>
+
+   
+  <nav class="article-nav">
+    
+    
+      <a href="/2023/03/18/Java%E5%AD%A6%E4%B9%A0%E8%B7%AF%E7%BA%BF/" class="article-nav-link">
+        <strong class="article-nav-caption">下一篇</strong>
+        <div class="article-nav-title">Java学习路线</div>
+      </a>
+    
+  </nav>
+
+  
+   
+  
+   
+    <script src="https://cdn.staticfile.org/twikoo/1.4.18/twikoo.all.min.js"></script>
+    <div id="twikoo" class="twikoo"></div>
+    <script>
+        twikoo.init({
+            envId: ""
+        })
+    </script>
+ 
+</article>
+
+</section>
+      <footer class="footer">
+  <div class="outer">
+    <ul>
+      <li>
+        Copyrights &copy;
+        2015-2023
+        <i class="ri-heart-fill heart_icon"></i> John Doe
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+        
+        <span>
+  <span><i class="ri-user-3-fill"></i>Visitors:<span id="busuanzi_value_site_uv"></span></span>
+  <span class="division">|</span>
+  <span><i class="ri-eye-fill"></i>Views:<span id="busuanzi_value_page_pv"></span></span>
+</span>
+        
+      </li>
+    </ul>
+    <ul>
+      
+    </ul>
+    <ul>
+      
+    </ul>
+    <ul>
+      <li>
+        <!-- cnzz统计 -->
+        
+        <script type="text/javascript" src='https://s9.cnzz.com/z_stat.php?id=1278069914&amp;web_id=1278069914'></script>
+        
+      </li>
+    </ul>
+  </div>
+</footer>    
+    </main>
+    <div class="float_btns">
+      <div class="totop" id="totop">
+  <i class="ri-arrow-up-line"></i>
+</div>
+
+<div class="todark" id="todark">
+  <i class="ri-moon-line"></i>
+</div>
+
+    </div>
+    <aside class="sidebar on">
+      <button class="navbar-toggle"></button>
+<nav class="navbar">
+  
+  <div class="logo">
+    <a href="/"><img src="/images/ayer-side.svg" alt="JavaWorld"></a>
+  </div>
+  
+  <ul class="nav nav-main">
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/">主页</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/archives">归档</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/categories">分类</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/tags">标签</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/tags/%E6%97%85%E8%A1%8C/">旅行</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" target="_blank" rel="noopener" href="http://shenyu-vip.lofter.com">摄影</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/friends">友链</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/2019/about">关于我</a>
+    </li>
+    
+  </ul>
+</nav>
+<nav class="navbar navbar-bottom">
+  <ul class="nav">
+    <li class="nav-item">
+      
+      <a class="nav-item-link nav-item-search"  title="Search">
+        <i class="ri-search-line"></i>
+      </a>
+      
+      
+      <a class="nav-item-link" target="_blank" href="/atom.xml" title="RSS Feed">
+        <i class="ri-rss-line"></i>
+      </a>
+      
+    </li>
+  </ul>
+</nav>
+<div class="search-form-wrap">
+  <div class="local-search local-search-plugin">
+  <input type="search" id="local-search-input" class="local-search-input" placeholder="Search...">
+  <div id="local-search-result" class="local-search-result"></div>
+</div>
+</div>
+    </aside>
+    <div id="mask"></div>
+
+<!-- #reward -->
+<div id="reward">
+  <span class="close"><i class="ri-close-line"></i></span>
+  <p class="reward-p"><i class="ri-cup-line"></i>请我喝杯咖啡吧~</p>
+  <div class="reward-box">
+    
+    <div class="reward-item">
+      <img class="reward-img" src="/images/alipay.jpg">
+      <span class="reward-type">支付宝</span>
+    </div>
+    
+    
+    <div class="reward-item">
+      <img class="reward-img" src="/images/wechat.jpg">
+      <span class="reward-type">微信</span>
+    </div>
+    
+  </div>
+</div>
+    
+<script src="/js/jquery-3.6.0.min.js"></script>
+ 
+<script src="/js/lazyload.min.js"></script>
+
+<!-- Tocbot -->
+ 
+<script src="/js/tocbot.min.js"></script>
+
+<script>
+  tocbot.init({
+    tocSelector: ".tocbot",
+    contentSelector: ".article-entry",
+    headingSelector: "h1, h2, h3, h4, h5, h6",
+    hasInnerContainers: true,
+    scrollSmooth: true,
+    scrollContainer: "main",
+    positionFixedSelector: ".tocbot",
+    positionFixedClass: "is-position-fixed",
+    fixedSidebarOffset: "auto",
+  });
+</script>
+
+<script src="https://cdn.staticfile.org/jquery-modal/0.9.2/jquery.modal.min.js"></script>
+<link
+  rel="stylesheet"
+  href="https://cdn.staticfile.org/jquery-modal/0.9.2/jquery.modal.min.css"
+/>
+<script src="https://cdn.staticfile.org/justifiedGallery/3.8.1/js/jquery.justifiedGallery.min.js"></script>
+
+<script src="/dist/main.js"></script>
+
+<!-- ImageViewer -->
+ <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<link rel="stylesheet" href="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe.min.css">
+<link rel="stylesheet" href="https://cdn.staticfile.org/photoswipe/4.1.3/default-skin/default-skin.min.css">
+<script src="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe.min.js"></script>
+<script src="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe-ui-default.min.js"></script>
+
+<script>
+    function viewer_init() {
+        let pswpElement = document.querySelectorAll('.pswp')[0];
+        let $imgArr = document.querySelectorAll(('.article-entry img:not(.reward-img)'))
+
+        $imgArr.forEach(($em, i) => {
+            $em.onclick = () => {
+                // slider展开状态
+                // todo: 这样不好，后面改成状态
+                if (document.querySelector('.left-col.show')) return
+                let items = []
+                $imgArr.forEach(($em2, i2) => {
+                    let img = $em2.getAttribute('data-idx', i2)
+                    let src = $em2.getAttribute('data-target') || $em2.getAttribute('src')
+                    let title = $em2.getAttribute('alt')
+                    // 获得原图尺寸
+                    const image = new Image()
+                    image.src = src
+                    items.push({
+                        src: src,
+                        w: image.width || $em2.width,
+                        h: image.height || $em2.height,
+                        title: title
+                    })
+                })
+                var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, {
+                    index: parseInt(i)
+                });
+                gallery.init()
+            }
+        })
+    }
+    viewer_init()
+</script> 
+<!-- MathJax -->
+
+<!-- Katex -->
+
+<!-- busuanzi  -->
+ 
+<script src="/js/busuanzi-2.3.pure.min.js"></script>
+ 
+<!-- ClickLove -->
+
+<!-- ClickBoom1 -->
+
+<!-- ClickBoom2 -->
+
+<!-- CodeCopy -->
+ 
+<link rel="stylesheet" href="/css/clipboard.css">
+ <script src="https://cdn.staticfile.org/clipboard.js/2.0.10/clipboard.min.js"></script>
+<script>
+  function wait(callback, seconds) {
+    var timelag = null;
+    timelag = window.setTimeout(callback, seconds);
+  }
+  !function (e, t, a) {
+    var initCopyCode = function(){
+      var copyHtml = '';
+      copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
+      copyHtml += '<i class="ri-file-copy-2-line"></i><span>COPY</span>';
+      copyHtml += '</button>';
+      $(".highlight .code pre").before(copyHtml);
+      $(".article pre code").before(copyHtml);
+      var clipboard = new ClipboardJS('.btn-copy', {
+        target: function(trigger) {
+          return trigger.nextElementSibling;
+        }
+      });
+      clipboard.on('success', function(e) {
+        let $btn = $(e.trigger);
+        $btn.addClass('copied');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('ri-file-copy-2-line');
+        $icon.addClass('ri-checkbox-circle-line');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPIED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('ri-checkbox-circle-line');
+          $icon.addClass('ri-file-copy-2-line');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+      clipboard.on('error', function(e) {
+        e.clearSelection();
+        let $btn = $(e.trigger);
+        $btn.addClass('copy-failed');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('ri-file-copy-2-line');
+        $icon.addClass('ri-time-line');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPY FAILED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('ri-time-line');
+          $icon.addClass('ri-file-copy-2-line');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+    }
+    initCopyCode();
+  }(window, document);
+</script>
+ 
+<!-- CanvasBackground -->
+
+<script>
+  if (window.mermaid) {
+    mermaid.initialize({ theme: "forest" });
+  }
+</script>
+
+
+    
+    
+
+  </div>
+</body>
+
+</html>
