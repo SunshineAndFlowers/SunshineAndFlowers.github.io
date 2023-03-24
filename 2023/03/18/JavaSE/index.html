@@ -27,7 +27,7 @@
 <meta property="og:description" content="##Java的开发环境数据类型  java开发环境：  编译运行过程：  编译期：.java源文件，经过编译，生成.class字节码文件  运行期：JVM加载.class并运行.class(0和1) 特点：跨平台、一次编译到处使用    名词解释：  JVM：java虚拟机  加载.class并运行.class   JRE：java运行环境  除了包含JVM以外还包含了运行java程序所必须的环境">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2023-03-18T08:08:22.000Z">
-<meta property="article:modified_time" content="2023-03-20T00:50:47.525Z">
+<meta property="article:modified_time" content="2023-03-24T09:24:16.597Z">
 <meta property="article:author" content="阳光与鲜花">
 <meta name="twitter:card" content="summary">
 
@@ -212,7 +212,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-03-20 08:50:47" itemprop="dateModified" datetime="2023-03-20T08:50:47+08:00">2023-03-20</time>
+      <time title="Modified: 2023-03-24 17:24:16" itemprop="dateModified" datetime="2023-03-24T17:24:16+08:00">2023-03-24</time>
     </span>
 
   
@@ -510,15 +510,104 @@
 </ul>
 </li>
 </ul>
-<p>&#96;&#96;&#96;java<br>int num &#x3D; 5;<br>int flag &#x3D; num&gt;0?1:-1;<br>System.out.println(flag); &#x2F;&#x2F;1</p>
-<p>int a&#x3D;8,b&#x3D;5;<br>int max &#x3D; a&gt;b?a:b;<br>System.out.println(“max&#x3D;”+max); &#x2F;&#x2F;max&#x3D;8</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br></pre></td><td class="code"><pre><span class="line">       <span class="type">int</span> <span class="variable">num</span> <span class="operator">=</span> <span class="number">5</span>;</span><br><span class="line">       <span class="type">int</span> <span class="variable">flag</span> <span class="operator">=</span> num&gt;<span class="number">0</span>?<span class="number">1</span>:-<span class="number">1</span>;</span><br><span class="line">       System.out.println(flag); <span class="comment">//1</span></span><br><span class="line">       </span><br><span class="line">       <span class="type">int</span> a=<span class="number">8</span>,b=<span class="number">5</span>;</span><br><span class="line">       <span class="type">int</span> <span class="variable">max</span> <span class="operator">=</span> a&gt;b?a:b;</span><br><span class="line">       System.out.println(<span class="string">&quot;max=&quot;</span>+max); <span class="comment">//max=8</span></span><br><span class="line"><span class="number">2.</span> 分支结构(上)：基于条件执行</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">if</span> <span class="keyword">else</span>并且<span class="keyword">if</span>和<span class="keyword">else</span>之间可以嵌套。</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="number">3.</span>循坏</span><br><span class="line"></span><br><span class="line"><span class="number">1.</span> Scanner接收用户输入的数据：</span><br><span class="line"></span><br><span class="line"><span class="number">2.</span> 分支结构(下)：</span><br><span class="line"></span><br><span class="line">   - <span class="keyword">switch</span>...<span class="keyword">case</span>结构：多条路</span><br><span class="line">     - 优点：效率高、结构清晰</span><br><span class="line">     - 缺点：只能对整数判断相等</span><br><span class="line">     - <span class="keyword">break</span>：跳出<span class="keyword">switch</span></span><br><span class="line"></span><br><span class="line"><span class="number">3.</span> 循环：反复多次执行一段相同或相似的代码</span><br><span class="line"></span><br><span class="line"><span class="number">4.</span> 循环三要素：</span><br><span class="line"></span><br><span class="line">   - 循环变量的初始化</span><br><span class="line">   - 循环条件(以循环变量为基础)</span><br><span class="line">   - 循环变量的改变</span><br><span class="line"></span><br><span class="line"><span class="number">5.</span> 循环结构：</span><br><span class="line"></span><br><span class="line">   - <span class="keyword">while</span>结构：先判断后执行，有可能一次都不执行</span><br><span class="line"></span><br><span class="line">   - <span class="keyword">do</span>...<span class="keyword">while</span>结构：先执行后判断，至少执行一次</span><br><span class="line"></span><br><span class="line">     &gt; 若要素<span class="number">1</span>与要素<span class="number">3</span>的代码相同，首选<span class="keyword">do</span>...<span class="keyword">while</span></span><br><span class="line"></span><br><span class="line">   - <span class="keyword">for</span>结构：应用率最高，与次数相关的</span><br><span class="line"></span><br><span class="line"><span class="number">1.</span> <span class="keyword">break</span>：跳出循环</span><br><span class="line"></span><br><span class="line">   <span class="keyword">continue</span>：跳过循环体中剩余语句而进入下一次循环</span><br><span class="line"></span><br><span class="line"><span class="number">2.</span> 嵌套循环：</span><br><span class="line"></span><br><span class="line">   - 循环中套循环，外层循环走一次，内层循环走所有次，嵌套层数越少越好，</span><br><span class="line">   - <span class="keyword">break</span>只能跳出当前一层循环</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="number">1.</span>方法</span><br><span class="line">  在C语言中叫函数</span><br><span class="line"><span class="number">2.</span> 方法：函数、过程</span><br><span class="line"></span><br><span class="line">   - 作用：用于封装一段特定的业务逻辑功能</span><br><span class="line">   - 建议：尽可能独立，一个方法只干一件事</span><br><span class="line">   - 方法可以被反复多次调用</span><br><span class="line">   - 好处：可以减少代码重复，有利于代码维护</span><br><span class="line">   - 何时用：只要是一个独立的业务功能，就得封装到一个方法中</span><br><span class="line"></span><br><span class="line"><span class="number">3.</span> 方法的定义：五要素</span><br><span class="line"></span><br><span class="line">   ```java</span><br><span class="line">   修饰词  返回值类型  方法名(参数列表)&#123;</span><br><span class="line">       方法体---------具体的业务逻辑功能实现</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+</ul>
+<ol start="4">
+<li><p>方法的调用：</p>
+<ul>
+<li>无返回值：方法名(有参传参);</li>
+<li>有返回值：数据类型  变量  &#x3D; 方法名(有参传参);</li>
+</ul>
+</li>
+<li><p>return：</p>
+<ul>
+<li>return 值;   &#x2F;&#x2F;1)结束方法的执行   2)返回结果给调用方————用在有返回值的方法中</li>
+<li>return;        &#x2F;&#x2F;1)结束方法的执行——————————————用在无返回值的方法中</li>
+</ul>
+</li>
+<li><p>方法的重载(overloading)：</p>
+<ul>
+<li><p>发生在同一类中，方法名相同，参数列表不同</p>
+</li>
+<li><p>编译器在编译时会根据方法的签名自动绑定方法</p>
+</li>
+</ul>
+</li>
+</ol>
+<p>#面向对象</p>
+<ol>
+<li><p>面向过程和面向对象：</p>
+<ul>
+<li>面向过程：以方法为单位来解决问题，比较适合简单的业务(大象装冰箱、去银行取钱)</li>
+<li>面向对象：以对象为单位为解决问题，比较适合复杂的业务(造个汽车、造个航母)</li>
+</ul>
+</li>
+<li><p>课程：面向对象5天是面向对象的入门，基本概念、语法、设计都讲了—-讲造车零部件</p>
+</li>
+<li><p>OO：面向对象</p>
+<p>OOA：面向对象分析</p>
+<p>OOD：面向对象设计</p>
+<p>OOAD：面向对象分析与设计</p>
+<p>OOP：面向对象编程—————————你们所参与的部分</p>
+</li>
+<li><p>高质量的代码：———————–你们以后的目标</p>
+<ul>
+<li>复用性好、扩展性好、维护性好、移植性好、</li>
+<li>可读性好、健壮性好、效率好……</li>
+</ul>
+</li>
+<li><p>类是一种引用数据类型</p>
+</li>
+<li><p>什么是类？什么是对象？</p>
+<ul>
+<li><p>现实生活是由很多很多对象组成的，基于对象抽出了类</p>
+</li>
+<li><p>对象：软件中真实存在的单个的个体&#x2F;东西</p>
+<p>类：类型&#x2F;类别，代表一类个体</p>
+</li>
+<li><p>类是对象的模子&#x2F;模板，对象是类的具体的实例，可以将类理解为类别&#x2F;模子&#x2F;图纸</p>
+</li>
+<li><p>类中可以包含：</p>
+<ul>
+<li>对象的属性&#x2F;特征&#x2F;数据———————-成员变量</li>
+<li>对象的行为&#x2F;动作&#x2F;功能———————-方法</li>
+</ul>
+</li>
+<li><p>一个类可以创建多个对象</p>
+</li>
+</ul>
+</li>
+<li><p>如何创建类？如何创建对象？如何访问成员？</p>
+</li>
+<li><p>this：指代当前对象，哪个对象调用方法它指的就是哪个对象</p>
+<ul>
+<li><p>只能用在方法中，方法中访问成员变量之前默认有个this.</p>
+</li>
+<li><p>this的用法：</p>
+<ul>
+<li><p>this.成员变量名——————–访问成员变量(必须掌握)</p>
+<blockquote>
+<p>当成员变量与局部变量同名时，若想访问成员变量，则this不能省略</p>
+</blockquote>
+</li>
+<li><p>this.方法名()————————-调用方法(一般不用)</p>
+</li>
+<li><p>this()———————————–调用构造方法(一般不用)</p>
 </li>
 </ul>
 </li>
 </ul>
-<ol start="2">
-<li><p>分支结构(上)：基于条件执行</p>
-<p> if else并且if和else之间可以嵌套。</p>
+</li>
+<li><p>构造方法：构造函数、构造器、构建器———-好处：复用给成员变量赋初始值的代码</p>
+<ul>
+<li>作用：给成员变量赋初始值</li>
+<li>语法：与类同名，没有返回值类型(连void都没有)</li>
+<li>调用：在创建(new)对象时被自动调用</li>
+<li>若自己不写构造方法，则编译器默认提供一个无参构造方法，若自己写了构造方法，则不再默认提供</li>
+<li>构造方法可以重载</li>
+</ul>
 </li>
 </ol>
 
