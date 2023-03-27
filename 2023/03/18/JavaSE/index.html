@@ -27,7 +27,7 @@
 <meta property="og:description" content="##Java的开发环境数据类型  java开发环境：  编译运行过程：  编译期：.java源文件，经过编译，生成.class字节码文件  运行期：JVM加载.class并运行.class(0和1) 特点：跨平台、一次编译到处使用    名词解释：  JVM：java虚拟机  加载.class并运行.class   JRE：java运行环境  除了包含JVM以外还包含了运行java程序所必须的环境">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2023-03-18T08:08:22.000Z">
-<meta property="article:modified_time" content="2023-03-24T09:24:16.597Z">
+<meta property="article:modified_time" content="2023-03-27T12:19:14.814Z">
 <meta property="article:author" content="阳光与鲜花">
 <meta name="twitter:card" content="summary">
 
@@ -212,7 +212,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-03-24 17:24:16" itemprop="dateModified" datetime="2023-03-24T17:24:16+08:00">2023-03-24</time>
+      <time title="Modified: 2023-03-27 20:19:14" itemprop="dateModified" datetime="2023-03-27T20:19:14+08:00">2023-03-27</time>
     </span>
 
   
@@ -608,6 +608,142 @@
 <li>若自己不写构造方法，则编译器默认提供一个无参构造方法，若自己写了构造方法，则不再默认提供</li>
 <li>构造方法可以重载</li>
 </ul>
+</li>
+</ol>
+<p>#面向对面编程</p>
+<ol>
+<li><p>面向过程和面向对象：</p>
+<ul>
+<li>面向过程：以方法为单位来解决问题，比较适合简单的业务(大象装冰箱、去银行取钱)</li>
+<li>面向对象：以对象为单位为解决问题，比较适合复杂的业务(造个汽车、造个航母)</li>
+</ul>
+</li>
+<li><p>课程：面向对象5天是面向对象的入门，基本概念、语法、设计都讲了—-讲造车零部件</p>
+</li>
+<li><p>OO：面向对象</p>
+<p>OOA：面向对象分析</p>
+<p>OOD：面向对象设计</p>
+<p>OOAD：面向对象分析与设计</p>
+<p>OOP：面向对象编程—————————你们所参与的部分</p>
+</li>
+<li><p>高质量的代码：———————–你们以后的目标</p>
+<ul>
+<li>复用性好、扩展性好、维护性好、移植性好、</li>
+<li>可读性好、健壮性好、效率好……</li>
+</ul>
+</li>
+<li><p>类是一种引用数据类型</p>
+</li>
+<li><p>什么是类？什么是对象？</p>
+<ul>
+<li><p>现实生活是由很多很多对象组成的，基于对象抽出了类</p>
+</li>
+<li><p>对象：软件中真实存在的单个的个体&#x2F;东西</p>
+<p>类：类型&#x2F;类别，代表一类个体</p>
+</li>
+<li><p>类是对象的模子&#x2F;模板，对象是类的具体的实例，可以将类理解为类别&#x2F;模子&#x2F;图纸</p>
+</li>
+<li><p>类中可以包含：</p>
+<ul>
+<li>对象的属性&#x2F;特征&#x2F;数据———————-成员变量</li>
+<li>对象的行为&#x2F;动作&#x2F;功能———————-方法</li>
+</ul>
+</li>
+<li><p>一个类可以创建多个对象</p>
+</li>
+</ul>
+</li>
+<li><p>如何创建类？如何创建对象？如何访问成员？</p>
+</li>
+<li><p>this：指代当前对象，哪个对象调用方法它指的就是哪个对象</p>
+<ul>
+<li><p>只能用在方法中，方法中访问成员变量之前默认有个this.</p>
+</li>
+<li><p>this的用法：</p>
+<ul>
+<li><p>this.成员变量名——————–访问成员变量(必须掌握)</p>
+<blockquote>
+<p>当成员变量与局部变量同名时，若想访问成员变量，则this不能省略</p>
+</blockquote>
+</li>
+<li><p>this.方法名()————————-调用方法(一般不用)</p>
+</li>
+<li><p>this()———————————–调用构造方法(一般不用)</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>构造方法：构造函数、构造器、构建器———-好处：复用给成员变量赋初始值的代码</p>
+<ul>
+<li>作用：给成员变量赋初始值</li>
+<li>语法：与类同名，没有返回值类型(连void都没有)</li>
+<li>调用：在创建(new)对象时被自动调用</li>
+<li>若自己不写构造方法，则编译器默认提供一个无参构造方法，若自己写了构造方法，则不再默认提供</li>
+<li>构造方法可以重载</li>
+</ul>
+</li>
+<li><p>创建对象：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">           引用</span><br><span class="line">数据类型 引用类型变量 指向    对象</span><br><span class="line"><span class="type">Student</span>    <span class="variable">zs</span>       <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Student</span>(); <span class="comment">//声明Student类型引用zs指向一个学生对象</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>默认值规则：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">byte</span>,<span class="type">short</span>,<span class="type">int</span>,<span class="type">long</span>,<span class="type">char</span>---------------<span class="number">0</span></span><br><span class="line"><span class="type">float</span>,<span class="type">double</span>---------------------------<span class="number">0.0</span></span><br><span class="line"><span class="type">boolean</span>--------------------------------<span class="literal">false</span></span><br><span class="line">引用类型---------------------------------<span class="literal">null</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>继承：</p>
+<ul>
+<li><p>作用：代码复用</p>
+</li>
+<li><p>通过extends实现继承</p>
+</li>
+<li><p>超类&#x2F;基类&#x2F;父类：共有的属性和行为</p>
+<p>派生类&#x2F;子类：特有的属性和行为</p>
+</li>
+<li><p>派生类可以访问：超类的+派生类的，超类不能访问派生类的</p>
+</li>
+<li><p>一个超类可以有多个派生类，一个派生类只能有一个超类———单一继承</p>
+</li>
+<li><p>具有传递性</p>
+</li>
+<li><p>java规定：构造派生类之前必须先构造超类</p>
+<ul>
+<li><p>在派生类的构造方法中若没有调用超类的构造方法，则默认super()调用超类的无参构造方法</p>
+</li>
+<li><p>在派生类的构造方法中若自己调用了超类的构造方法，则不再默认提供</p>
+<blockquote>
+<p>注意：super()调用超类构造方法，必须位于派生类构造方法中的第1行</p>
+</blockquote>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>super：指代当前对象的超类对象</p>
+<ul>
+<li><p>super.成员变量名————————-访问超类的成员变量</p>
+<blockquote>
+<p>当超类成员变量和派生类成员变量同名时，super指超类的，this指派生类的</p>
+<p>若没有同名现象，则写super和this是一样的</p>
+</blockquote>
+</li>
+<li><p>super.方法名()——————————调用超类的方法</p>
+</li>
+<li><p>super()—————————————-调用超类的构造方法</p>
+</li>
+</ul>
+</li>
+<li><p>方法的重写(override&#x2F;overriding)：重新写、覆盖</p>
+<ul>
+<li><p>发生在父子类中，方法名相同，参数列表相同</p>
+</li>
+<li><p>重写方法被调用时，看对象的类型—————new谁就调谁的，这是规定</p>
+</li>
+</ul>
+</li>
+<li><p>泛化：从程序设计角度而言叫泛化，从代码实现角度而言叫继承，泛化就是继承</p>
+</li>
+<li><p>继承要符合is(是)的关系</p>
+</li>
+<li><p>继承的是超类的成员变量和普通方法，不包括超类的构造方法，超类的构造方法是被派生类通过super()来调用的，而不是继承的</p>
 </li>
 </ol>
 
