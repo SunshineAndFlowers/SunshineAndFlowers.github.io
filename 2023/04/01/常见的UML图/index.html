@@ -19,13 +19,15 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.15.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js"></script>
 
-    <meta property="og:type" content="article">
+    <meta name="description" content="1、用例图 描述角色以及角色与用例之间的连接关系。说明的是谁要使用系统，以及他们使用该系统可以做些什么。  2、类图 类图是描述系统中的类，以及各个类之间的关系的静态视图。能够让我们在正确编写代码以前对系统有一个全面的认识。类图是一种模型类型，确切的说，是一种静态模型类型。 3、对象图 与类图极为相似，它是类图的实例，对象图显示类的多个对象实例，而不是实际的类。它描述的不是类之间的关系，而是对象之">
+<meta property="og:type" content="article">
 <meta property="og:title" content="常见的UML图">
 <meta property="og:url" content="http://example.com/2023/04/01/%E5%B8%B8%E8%A7%81%E7%9A%84UML%E5%9B%BE/index.html">
 <meta property="og:site_name" content="JavaWorld">
+<meta property="og:description" content="1、用例图 描述角色以及角色与用例之间的连接关系。说明的是谁要使用系统，以及他们使用该系统可以做些什么。  2、类图 类图是描述系统中的类，以及各个类之间的关系的静态视图。能够让我们在正确编写代码以前对系统有一个全面的认识。类图是一种模型类型，确切的说，是一种静态模型类型。 3、对象图 与类图极为相似，它是类图的实例，对象图显示类的多个对象实例，而不是实际的类。它描述的不是类之间的关系，而是对象之">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2023-04-01T05:54:55.000Z">
-<meta property="article:modified_time" content="2023-04-01T05:54:55.217Z">
+<meta property="article:modified_time" content="2023-04-03T00:28:58.708Z">
 <meta property="article:author" content="阳光与鲜花">
 <meta name="twitter:card" content="summary">
 
@@ -205,6 +207,13 @@
 
       <time title="Created: 2023-04-01 13:54:55" itemprop="dateCreated datePublished" datetime="2023-04-01T13:54:55+08:00">2023-04-01</time>
     </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2023-04-03 08:28:58" itemprop="dateModified" datetime="2023-04-03T08:28:58+08:00">2023-04-03</time>
+    </span>
 
   
 </div>
@@ -216,7 +225,45 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        
+        <p>1、用例图</p>
+<pre><code>描述角色以及角色与用例之间的连接关系。说明的是谁要使用系统，以及他们使用该系统可以做些什么。
+</code></pre>
+<p>2、类图</p>
+<p>类图是描述系统中的类，以及各个类之间的关系的静态视图。能够让我们在正确编写代码以前对系统有一个全面的认识。类图是一种模型类型，确切的说，是一种静态模型类型。</p>
+<p>3、对象图</p>
+<p>与类图极为相似，它是类图的实例，对象图显示类的多个对象实例，而不是实际的类。它描述的不是类之间的关系，而是对象之间的关系。</p>
+<p>4、活动图</p>
+<pre><code>描述用例要求所要进行的活动，以及活动间的约束关系，有利于识别并行活动。能够演示出系统中哪些地方存在功能
+</code></pre>
+<p>5、状态图</p>
+<pre><code>描述类的对象所有可能的状态，以及事件发生时状态的转移条件。可以捕获对象、子系统和系统的生命周期。他们可以告知一个对象可以拥有的状态，并且事件(如消息的接收、时间的流逝、错误、条件变为真等)会怎么随着时间的推移来影响这些状态。一个状态图应该连接到所有具有清晰的可标识状态和复杂行为的类；该图可以确定类的行为，以及该行为如何根据当前的状态变化，也可以展示哪些事件将会改变类的对象的状态。状态图是对类图的补充。
+</code></pre>
+<p>6、序列图（顺序图）</p>
+<pre><code>序列图是用来显示你的参与者如何以一系列顺序的步骤与系统的对象交互的模型。顺序图可以用来展示对象之间是如何进行交互的。顺序图将显示的重点放在消息序列上，即强调消息是如何在对象之间被发送和接收的。
+</code></pre>
+<p>7、协作图</p>
+<pre><code>和序列图相似，显示对象间的动态合作关系。可以看成是类图和顺序图的交集，协作图建模对象或者角色，以及它们彼此之间是如何通信的。如果强调时间和顺序，则使用序列图；如果强调上下级关系，则选择协作图；这两种图合称为交互图。
+</code></pre>
+<p>8、构件图 （组件图）</p>
+<pre><code>描述代码构件的物理结构以及各种构建之间的依赖关系。用来建模软件的组件及其相互之间的关系，这些图由构件标记符和构件之间的关系构成。在组件图中，构件时软件单个组成部分，它可以是一个文件，产品、可执行文件和脚本等。
+</code></pre>
+<p>9、部署图</p>
+<pre><code>是用来建模系统的物理部署。例如计算机和设备，以及它们之间是如何连接的。部署图的使用者是开发人员、系统集成人员和测试人员。
+</code></pre>
+<p>10.包图是基本静态图的组合，属于静态图。</p>
+<pre><code>UML包图通常用于描述系统的逻辑架构——层、子系统、包等。层可以建模为UML包。例如，UI（用户界面）层可以建模为名为UI层的包。UML包图分层组织元素的方式也可以嵌套。
+</code></pre>
+<p>在需求阶段：采用用例图来描述需求</p>
+<p>在分析阶段：采用类图来描述静态结构</p>
+<p>在设计阶段：采用类图、包图对类的接口进行设计</p>
+<p>在实现阶段：将类用某个面向对象的语言实现</p>
+<p>在集成与交付阶段：构件图、包图、部署图</p>
+<p>在测试阶段：单元测试使用类图和类的规格说明书</p>
+<pre><code>                 集成测试阶段使用类图、包图、构件图和合作图
+
+                 系统测试使用用例图来测试系统功能
+</code></pre>
+
     </div>
 
     
